@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500;700;900&family=Roboto:wght@300;400;700&display=swap");
+html {
+  font-size: 62.5%;
+  --clearcolor: #FFFFFF;
+  --ligthcolor: #FAFBFC;
+  --semilightcolor: #F5F6F6;
+  --midcolor: #585B56;
+  --darkcolor: #6E9887;
+  --accentcolor: #FF595E;
+}
+
+html * {
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  color: var(--midcolor);
+}
+
+html h1 {
+  color: var(--clearcolor);
+  text-align: center;
+  font-size: 4em;
+  margin: 40px;
+}
+
+html h2 {
+  text-align: center;
+  font-size: 2.4em;
+  margin: 20px;
+}
+
+html h3 {
+  text-align: left;
+  font-size: 1.8em;
+  margin: 10px;
+}
+
+html h4 {
+  text-align: left;
+  font-size: 1.6em;
+  margin: 10px;
+}
+
+html i {
+  text-align: center;
+  font-size: 1em;
+  margin: 10px;
+  color: var(--accentcolor);
+}
+
+html select, html option, html input {
+  margin: 10px;
+  width: 200px;
+  color: var(--darkcolor);
+  font-size: 1.2em;
+  background: var(--ligthcolor);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  border: 2px solid var(--semilightcolor);
+  text-align: center;
+}
+
+html input:hover {
+  background-color: var(--darkcolor);
+  color: var(--ligthcolor);
+}
+
+html p {
+  text-align: left;
+  margin-left: 40px;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+html th, html td {
+  border: 0px solid var(--semilightcolor);
+  padding: 5px;
+  width: 20px;
+  padding: 8px;
+  text-align: center;
+  border-bottom: 1px solid var(--semilightcolor);
+  font-size: 0.8em;
+}
+
+html tr:hover {
+  background-color: var(--semilightcolor);
+  color: var(--clearcolor);
+}
+
+html img {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+
+.hero {
+  background-color: var(--ligthcolor);
+  width: 100%;
+  height: 100vh;
+}
+
+.hero .box {
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+  height: 85%;
+  width: 95%;
+  background-color: var(--clearcolor);
+  -webkit-box-shadow: 0px 11px 35px 2px var(--semilightcolor);
+          box-shadow: 0px 11px 35px 2px var(--semilightcolor);
+  -webkit-transform: translateY(12%);
+          transform: translateY(12%);
+}
+
+.hero .box #left {
+  position: absolute;
+  background: white;
+  width: 50%;
+  height: 100%;
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 4;
+}
+
+.hero .box #right {
+  width: 50%;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+}
+
+.hero .box #back {
+  position: absolute;
+  background: white;
+  width: 50%;
+  height: 100%;
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 2;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero .box #log {
+  position: absolute;
+  background: white;
+  width: 50%;
+  height: 100%;
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 1;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: scroll;
+  text-align: center;
+}
+
+.hero .box .myLog {
+  width: 90%;
+}
+
+.hero .horizontal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.hero .vertical {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+/*# sourceMappingURL=style.css.map */
