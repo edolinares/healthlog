@@ -2,18 +2,18 @@ let inputOpt = ["Log","General","Mind","Body","Reads","Doctor Visit"]; // ARRAY 
 let inputForm = [ // ARRAY OF ELEMENTS, FIELDS, AND TYPES OF EACH INPUT 
                 [],
                 [                 
-                    {field: "Title",  
-                    type: "text"},
                     {field: "Date",
                     type: "date"},
+                    {field: "Title",  
+                    type: "text"},
                     {field: "Description",
                     type: "text"}
                 ],
                 [                 
-                    {field: "How do you feel?",  
-                    type: "text"},
                     {field: "Date",
                     type: "date"},
+                    {field: "How do you feel?",  
+                    type: "text"},
                     {field: "Why?",
                     type: "text"}
                 ],
@@ -37,10 +37,10 @@ let inputForm = [ // ARRAY OF ELEMENTS, FIELDS, AND TYPES OF EACH INPUT
                     type: "number"}
                 ],
                 [                 
-                    {field: "Medic",  
-                    type: "text"},
                     {field: "Date",  
                     type: "date"},
+                    {field: "Medic",  
+                    type: "text"},
                     {field: "Symptoms",
                     type: "text"},
                     {field: "Diagnostic",
