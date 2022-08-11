@@ -4,6 +4,7 @@ let mylog = [];
 
 //FUNCTIONS
 function loadHero(){
+    // FALTA CARGAR DATOS DESDE LOCAL STORAGE
     let left = document.querySelector('#left');
     left.appendChild(domItem('img','','onclick','moveH("left",-50)','src','./img/hero.svg'));
     let right = document.querySelector('#right');
@@ -80,7 +81,10 @@ function save(index){
                 }
             }
         });
-    formError ? 0 : mylog.push(formData);
+        if (formError !== true){
+            mylog.push(formData);
+            // FALTA LIMPIAR CAMPOS Y GUARDAR EN LOCAL STORAGE
+        }
 }
 
 function showLog(){
@@ -117,3 +121,5 @@ function showLog(){
     }
     log.appendChild(mainbox);
 }
+
+// FALTA PODER BORRAR ELEMENTOS DEL LOG

@@ -137,6 +137,7 @@ html img {
 }
 
 .hero .box #back {
+  padding: 50px;
   position: absolute;
   background: white;
   width: 50%;
