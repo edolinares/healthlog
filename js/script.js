@@ -4,8 +4,11 @@ function loadHero(){
     let left = document.querySelector('#left');
     left.appendChild(domItem('img','','onclick','moveH("left",-50)','src','./img/hero.svg'));
     let right = document.querySelector('#right');
+    right.setAttribute('onclick','moveH("left",50)');
     document.querySelector('#right').style.backgroundColor = "var(--darkcolor)";
     right.appendChild(domItem('h1','Welcome','id','welcome','onclick','moveH("left",50)'));
+    let icon = domItem('i','','class','uil uil-angle-right-b','id','Go');
+    right.appendChild(icon);
     let back = document.querySelector('#back');
     inputOpt.forEach( element =>{
         button = domItem('input','','type','button','value',element);
