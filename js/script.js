@@ -5,10 +5,10 @@ let mylog = [];
 //FUNCTIONS
 function loadHero(){
     let left = document.querySelector('#left');
-    left.appendChild(domItem('img','','onclick','moverigth("left")','src','./img/hero.svg'));
+    left.appendChild(domItem('img','','onclick','moveH("left",-50)','src','./img/hero.svg'));
     let right = document.querySelector('#right');
     document.querySelector('#right').style.backgroundColor = "var(--darkcolor)";
-    right.appendChild(domItem('h1','Welcome','id','welcome','onclick','moveleft("left")'));
+    right.appendChild(domItem('h1','Welcome','id','welcome','onclick','moveH("left",50)'));
     let back = document.querySelector('#back');
     inputOpt.forEach( element =>{
         button = domItem('input','','type','button','value',element);
@@ -35,7 +35,7 @@ function populateForm(){
     //document.getElementById('back').style.zIndex = "5";
     let index = 0;
     for (let i = 0; i < inputOpt.length; i++) { index = inputOpt[i] == inputOptPress ? i : index; }
-    moveleft('back');
+    moveH('back',50);
     if (index > 0){
         let log = document.querySelector('#log');
         let mainbox = domItem('div','','class','vertical ','id','');
@@ -84,7 +84,7 @@ function save(index){
 }
 
 function showLog(){
-    moveleft("left");
+    moveH("left",50);
     const toreset = document.getElementById('log');
     toreset.innerHTML = '';
     let log = document.querySelector('#log');

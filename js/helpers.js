@@ -1,5 +1,4 @@
-function moveleft(item){     document.getElementById(item).style.transform = "translateX(50%)";  }
-function moverigth(item){ document.getElementById(item).style.transform = "translateX(-50%)"; }
+function moveH(item,percentage){ document.getElementById(item).style.transform = "translateX("+percentage+"%)";  }
 
 function domItem(type,value,atb1,atbv1,atb2,atbv2){
     element = document.createElement(type);
