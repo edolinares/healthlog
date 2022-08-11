@@ -1,53 +1,4 @@
 //VARIABLES
-let inputOpt = ["Log","General","Mind","Body","Reads","Doctor Visit"];
-let inputForm = [
-                [],
-                [                 
-                    {field: "Title",  
-                    type: "text"},
-                    {field: "Date",
-                    type: "date"},
-                    {field: "Description",
-                    type: "text"}
-                ],
-                [                 
-                    {field: "How do you feel?",  
-                    type: "text"},
-                    {field: "Date",
-                    type: "date"},
-                    {field: "Why?",
-                    type: "text"}
-                ],
-                [                 
-                    {field: "Date",
-                    type: "date"},
-                    {field: "Weigth",  
-                    type: "number"},
-                    {field: "Heigth",  
-                    type: "number"},
-                    {field: "IMC",
-                    type: "number"}
-                ],
-                [                 
-                    {field: "Select",  
-                    type: "select",
-                    options : ['temperature','blood pressure','Oxigenation','Heart Rate','Breat Frequency']},
-                    {field: "Read",
-                    type: "number"}
-                ],
-                [                 
-                    {field: "Medic",  
-                    type: "text"},
-                    {field: "Date",  
-                    type: "date"},
-                    {field: "Symptoms",
-                    type: "text"},
-                    {field: "Diagnostic",
-                    type: "text"},
-                    {field: "Medicines",
-                    type: "text"}
-                ],
-                ]
 let inputOptPress = '';
 let mylog = [];
 
@@ -64,34 +15,19 @@ function loadHero(){
         button.setAttribute('id',"inputOpt");
         back.appendChild(button);
     });
+        //LISTENERS
     let inputOptbtns = document.querySelectorAll('#inputOpt');
-    //LISTENERS
     inputOptbtns.forEach(function (i) { i.addEventListener('click', function() {    
         inputOptPress = i.value;  
         document.getElementById("left").style.zIndex = "-1";
         populateForm();
     });});
+
+
+
+
+
 }
-
-function moveleft(item){     document.getElementById(item).style.transform = "translateX(50%)";  }
-function moverigth(item){ document.getElementById(item).style.transform = "translateX(-50%)"; }
-
-function domItem(type,value,atb1,atbv1,atb2,atbv2){
-    element = document.createElement(type);
-    data = document.createTextNode(value);
-    element.appendChild(data);
-    element.setAttribute(atb1,atbv1);
-    element.setAttribute(atb2,atbv2);
-    return element;
-}
-
-function notification(icon,text){
-    Swal.fire({
-      icon: ''+icon,
-      title: 'Notification',
-      text: ''+text,
-    })
-  }
 
 function populateForm(){
     const toreset = document.getElementById('log');
@@ -146,7 +82,6 @@ function save(index){
         });
     formError ? 0 : mylog.push(formData);
 }
-
 
 function showLog(){
     moveleft("left");
