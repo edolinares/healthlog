@@ -27,7 +27,9 @@ let inputForm = [
                     {field: "IMC",
                     type: "number"}
                 ],
-                [                 
+                [   
+                    {field: "Date",
+                    type: "date"},            
                     {field: "Select",  
                     type: "select",
                     options : ['temperature','blood pressure','Oxigenation','Heart Rate','Breat Frequency']},
@@ -46,4 +48,8 @@ let inputForm = [
                     {field: "Medicines",
                     type: "text"}
                 ],
-                ]
+                ];
+let inputOptPress = '';
+let mylog = ["Log"];
+let localStg = "HealthForm"
+let deleteMePress = '';

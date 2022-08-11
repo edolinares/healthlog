@@ -152,5 +152,8 @@ html{
         justify-content: flex-start;
         //align-items: center;
     }
-
+    .swal2-styled.swal2-confirm {
+        background-color: var(--darkcolor);
+    }
 }
+

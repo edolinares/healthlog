@@ -16,3 +16,16 @@ function notification(icon,text){
       text: ''+text,
     })
   }
+
+function notificationCorner() {
+    Toastify({
+      text: "Item Saved",
+      duration: 3000,
+      gravity: 'top',
+      position: 'left',
+      style: {
+        background: "var(--darkcolor)",
+      },
+  }).showToast(); 
+}
+  

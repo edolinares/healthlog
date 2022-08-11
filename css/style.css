@@ -198,4 +198,8 @@ html img {
       -ms-flex-pack: start;
           justify-content: flex-start;
 }
+
+.hero .swal2-styled.swal2-confirm {
+  background-color: var(--darkcolor);
+}
 /*# sourceMappingURL=style.css.map */

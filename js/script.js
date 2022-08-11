@@ -1,10 +1,6 @@
-//VARIABLES
-let inputOptPress = '';
-let mylog = [];
-
-//FUNCTIONS
 function loadHero(){
-    // FALTA CARGAR DATOS DESDE LOCAL STORAGE
+    const str = localStorage.getItem(localStg);
+    mylog = str ? JSON.parse(str) : mylog;
     let left = document.querySelector('#left');
     left.appendChild(domItem('img','','onclick','moveH("left",-50)','src','./img/hero.svg'));
     let right = document.querySelector('#right');
@@ -23,22 +19,15 @@ function loadHero(){
         document.getElementById("left").style.zIndex = "-1";
         populateForm();
     });});
-
-
-
-
-
 }
 
 function populateForm(){
-    const toreset = document.getElementById('log');
-    toreset.innerHTML = '';
-    //document.getElementById('back').style.zIndex = "5";
+    let log = document.querySelector('#log');
+  log.innerHTML = '';
     let index = 0;
     for (let i = 0; i < inputOpt.length; i++) { index = inputOpt[i] == inputOptPress ? i : index; }
     moveH('back',50);
     if (index > 0){
-        let log = document.querySelector('#log');
         let mainbox = domItem('div','','class','vertical ','id','');
         let title = domItem('h2',inputOpt[index],'class','','id','');
         mainbox.appendChild(title);
@@ -63,6 +52,8 @@ function populateForm(){
 }
 
 function save(index){
+    console.log("index: "+index);
+    console.log("inputOpt [index]: "+inputOpt[index]);
     let formError = false;
     let formData = [];
         formData.push(inputOpt[index]);
@@ -83,7 +74,13 @@ function save(index){
         });
         if (formError !== true){
             mylog.push(formData);
-            // FALTA LIMPIAR CAMPOS Y GUARDAR EN LOCAL STORAGE
+            const jsonArr = JSON.stringify(mylog);
+            localStorage.setItem(localStg, jsonArr);
+            inputForm[index].forEach(element =>{
+            let formInput = document.getElementById(element.field);
+            if (element.type !== 'select') formInput.value = '';
+            });
+            notificationCorner();
         }
 }
 
@@ -95,7 +92,7 @@ function showLog(){
     let mainbox = domItem('div','','class','vertical myLog','id','');
     for (let i = 1; i < inputOpt.length; i++) {
         let title = domItem('h2',inputOpt[i],'class','','id','');
-        let table = domItem('table','','class','','id','');
+        let table = domItem('table','','class','myTable','id','');
         let current = inputOpt[i];
         mainbox.appendChild(title);
         let headers = domItem('tr','','class','','id','');
@@ -103,23 +100,31 @@ function showLog(){
         headers.appendChild(domItem('th','DeleteMe','class','','id',''));
         table.appendChild(headers); 
         let k = 0;
-        mylog.forEach( element => {
-            k++;
-            if (element[0] == current){
-                let row = domItem('tr','','class','','id',k);
-                for (let j = 1; j < element.length; j++) {
-                    row.appendChild(domItem('td',element[j],'class','','id',k));
+        if (mylog !== null) {
+            mylog.forEach( element => {
+                if (element[0] == current){
+                    let row = domItem('tr','','class','','id',k);
+                    for (let j = 1; j < element.length; j++) {
+                        row.appendChild(domItem('td',element[j],'class','','id',k));
+                    }
+                    let rowX = (domItem('td','','class','trash','id',k));
+                    let icon = domItem('i','','class','uil uil-trash','id',k);
+                    rowX.appendChild(icon);
+                    row.appendChild(rowX);
+                    table.appendChild(row);
                 }
-                let rowX = (domItem('td','','class','','id',k));
-                let icon = domItem('i','','class','uil uil-trash','id','');
-                rowX.appendChild(icon);
-                row.appendChild(rowX);
-                table.appendChild(row);
-            }
-        });
+                k++;
+            });
+        }
         mainbox.appendChild(table);
     }
     log.appendChild(mainbox);
+    let deleteMe = document.querySelectorAll('.trash'); //LISTENERS
+    deleteMe.forEach(function (i) { i.addEventListener('click', function() {    
+        deleted = mylog.splice(i.id,1);
+        const jsonArr = JSON.stringify(mylog);
+        localStorage.setItem(localStg, jsonArr);
+        populateForm();
+        });
+    });
 }
-
-// FALTA PODER BORRAR ELEMENTOS DEL LOG
