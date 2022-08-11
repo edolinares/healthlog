@@ -1,5 +1,5 @@
-let inputOpt = ["Log","General","Mind","Body","Reads","Doctor Visit"];
-let inputForm = [
+let inputOpt = ["Log","General","Mind","Body","Reads","Doctor Visit"]; // ARRAY OF TYPES OF ENTRIES
+let inputForm = [ // ARRAY OF ELEMENTS, FIELDS, AND TYPES OF EACH INPUT 
                 [],
                 [                 
                     {field: "Title",  
@@ -49,7 +49,7 @@ let inputForm = [
                     type: "text"}
                 ],
                 ];
-let inputOptPress = '';
-let mylog = ["Log"];
-let localStg = "HealthForm"
-let deleteMePress = '';
+let inputOptPress = ''; // USED TO KNOW WHAT BUTTON /FORM IS REQUIRED
+let mylog = []; // MY TEMPORAL DATABASE
+let localStg = "HealthForm" // USED TO IN CASE I WANT TO CHANGE THE NAME OF THE LOCAL STORAGE 
+let deleteMePress = ''; // USED TO KNOW WHAT ROW IS REQUIRED TO DELETE OF THE LOG
