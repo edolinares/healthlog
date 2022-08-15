@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500;700;900&family=Roboto:wght@300;400;700&display=swap');
-// DEFINE MY STANDARD CSS COMPONENTS USED OR NOT JET
+// DEFINE MY STANDARD CSS COMPONENTS USED OR NOT JET / SE DEFINEN LOS BASICOS PARA ESTANDARIZAR
 html{
         font-size: 62.5%; 
         --clearcolor: #FFFFFF;
@@ -87,7 +87,7 @@ html{
     }
 }
 
-// DEFINE MY CUSTOM CLASSES AND IDS
+// DEFINE MY CUSTOM CLASSES AND IDS / SE DEFINEN ESTILO PERSONALIZADOS PARA CLASES Y ID
 .hero{
     background-color: var(--ligthcolor);
     width: 100%;
