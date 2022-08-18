@@ -1,3 +1,5 @@
+//Author: Francisco Linares
+//edolinares@gmail.com
 function loadHero(){ // RUNS ON LOADING PAGE / CORRE AL CARGAR PAGINA
     const str = localStorage.getItem(localStg); // WE GET THE INFO OF LOCAL STORAGE / OBTENEMOS LOS DATOS DEL LOCAL STORAGE
     mylog = str ? JSON.parse(str) : mylog;
