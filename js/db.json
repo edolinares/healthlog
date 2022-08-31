@@ -1,0 +1,53 @@
+{
+"inputForm" : [ 
+                [],
+                [                 
+                    {"field": "Date",
+                    "type": "date"},
+                    {"field": "Title",  
+                    "type": "text"},
+                    {"field": "Description",
+                    "type": "text"}
+                ],
+                [                 
+                    {"field": "Date",
+                    "type": "date"},
+                    {"field": "How do you feel?",  
+                    "type": "text"},
+                    {"field": "Why?",
+                    "type": "text"}
+                ],
+                [                 
+                    {"field": "Date",
+                    "type": "date"},
+                    {"field": "Weigth",  
+                    "type": "number"},
+                    {"field": "Heigth",  
+                    "type": "number"},
+                    {"field": "IMC",
+                    "type": "number"}
+                ],
+                [   
+                    {"field": "Date",
+                    "type": "date"},            
+                    {"field": "Select",  
+                    "type": "select",
+                    "options" : ["temperature","blood pressure","Oxigenation","Heart Rate","Breat Frequency"]},
+                    {"field": "Read",
+                    "type": "number"}
+                ],
+                [                 
+                    {"field": "Date",  
+                    "type": "date"},
+                    {"field": "Medic",  
+                    "type": "text"},
+                    {"field": "Symptoms",
+                    "type": "text"},
+                    {"field": "Diagnostic",
+                    "type": "text"},
+                    {"field": "Medicines",
+                    "type": "text"}
+                ]
+            ]
+
+}

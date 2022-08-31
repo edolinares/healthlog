@@ -1,6 +1,13 @@
 //Author: Francisco Linares
 //edolinares@gmail.com
+
+let mgt;
+let inputForm = [];
+
+
 function loadHero(){ // RUNS ON LOADING PAGE / CORRE AL CARGAR PAGINA
+    mgt = new datamgt();
+    mgt.start();
     const str = localStorage.getItem(localStg); // WE GET THE INFO OF LOCAL STORAGE / OBTENEMOS LOS DATOS DEL LOCAL STORAGE
     mylog = str ? JSON.parse(str) : mylog;
     let left = document.querySelector('#left');  // DEFINE THE LEFT BOX AND ADD IMAGE / SE DEFINEN EL HERO
